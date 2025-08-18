@@ -1,6 +1,6 @@
 import React from "react";
 import DecorateGrid from "@/components/common/decorate-grid";
-import { Globe, LucideIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface FeatureSectionCardProps {

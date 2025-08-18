@@ -1,5 +1,4 @@
 import React from "react";
-import CardFlip from "@/components/ui/card-flip";
 import AnimateSlide from "@/components/ui/animate-slide";
 import { teamMembers } from "@/constants/data";
 import TeamCard from "@/components/common/team-card";
