@@ -3,6 +3,7 @@ import { Code } from "lucide-react";
 import NavItems from "@/components/common/nav-items";
 import { Button } from "@/components/ui/button";
 import MobileNavItems from "@/components/common/mobile-nav-items";
+import Feedback from "@/components/common/feedback";
 
 function NavBar() {
   return (
@@ -22,7 +23,10 @@ function NavBar() {
         </div>
         {/*NAV ITEMS*/}
         <NavItems />
-        <Button className="hidden 2md:flex">Get quote</Button>
+        <div className="flex items-center gap-3">
+          <Button className="hidden 2md:flex">Get quote</Button>
+          <Feedback />
+        </div>
         <MobileNavItems />
       </div>
     </section>

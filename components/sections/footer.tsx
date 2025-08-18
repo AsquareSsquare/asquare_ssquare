@@ -1,6 +1,10 @@
 import React from "react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Code } from "lucide-react";
+import { FiFacebook } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 import { navItems } from "@/constants/data";
 import Link from "next/link";
 
@@ -18,6 +22,20 @@ function Footer() {
               <p className="text-white font-bold">
                 A<sup>2</sup>S<sup>2</sup>
               </p>
+            </div>
+            <div className="flex items-center gap-3 mt-8">
+              <div className="size-9 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md">
+                <FiFacebook className="text-white" />
+              </div>
+              <div className="size-9 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md">
+                <FaInstagram className="text-white" />
+              </div>
+              <div className="size-9 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md">
+                <FaXTwitter className="text-white" />
+              </div>
+              <div className="size-9 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-md">
+                <FaLinkedin className="text-white" />
+              </div>
             </div>
             <div className="space-y-2 mt-8">
               <p className="text-gray-200 text-sm">
