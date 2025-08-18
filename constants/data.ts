@@ -168,3 +168,48 @@ export const teamMembers = [
     },
   },
 ];
+
+export const testimonials = [
+  {
+    rating: 4,
+    quote:
+      "CodeCrew Global delivered our MVP in just 6 weeks. Their communication and quality exceeded expectations!",
+    name: "Sarah Johnson",
+    title: "TechStart Inc., USA",
+  },
+  {
+    rating: 5,
+    quote:
+      "CodeCrew Global delivered our MVP in just 6 weeks. Their communication and quality exceeded expectations!",
+    name: "Sarah Johnson",
+    title: "TechStart Inc., USA",
+  },
+  {
+    rating: 4,
+    quote:
+      "CodeCrew Global delivered our MVP in just 6 weeks. Their communication and quality exceeded expectations!",
+    name: "Sarah Johnson",
+    title: "TechStart Inc., USA",
+  },
+  {
+    rating: 3,
+    quote:
+      "CodeCrew Global delivered our MVP in just 6 weeks. Their communication and quality exceeded expectations!",
+    name: "Sarah Johnson",
+    title: "TechStart Inc., USA",
+  },
+  {
+    rating: 5,
+    quote:
+      "CodeCrew Global delivered our MVP in just 6 weeks. Their communication and quality exceeded expectations!",
+    name: "Sarah Johnson",
+    title: "TechStart Inc., USA",
+  },
+  {
+    rating: 4,
+    quote:
+      "CodeCrew Global delivered our MVP in just 6 weeks. Their communication and quality exceeded expectations!",
+    name: "Sarah Johnson",
+    title: "TechStart Inc., USA",
+  },
+];

@@ -1,8 +1,15 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
-function DeepOceanGlowBg({ children }: { children: React.ReactNode }) {
+function DeepOceanGlowBg({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="min-h-screen w-full bg-black relative">
+    <div className={cn("min-h-screen w-full bg-black relative", className)}>
       {/* Deep Ocean Glow */}
       <div
         className="absolute inset-0 z-0"
