@@ -19,7 +19,12 @@ function Feedback() {
       >
         <Star />
       </Button>
-      <Button size="icon" variant="outline" onClick={() => setOpenModal(true)}>
+      <Button
+        size="icon"
+        variant="outline"
+        className="flex lg:hidden"
+        onClick={() => setOpenModal(true)}
+      >
         <Star />
       </Button>
 
