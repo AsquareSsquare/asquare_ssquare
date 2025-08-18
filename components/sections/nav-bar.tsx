@@ -26,8 +26,8 @@ function NavBar() {
         <div className="flex items-center gap-3">
           <Button className="hidden 2md:flex">Get quote</Button>
           <Feedback />
+          <MobileNavItems />
         </div>
-        <MobileNavItems />
       </div>
     </section>
   );

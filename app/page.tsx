@@ -5,6 +5,7 @@ import Footer from "@/components/sections/footer";
 import Testimonials from "@/components/sections/testimonials";
 
 export default function Home() {
+  console.log(navigator.userAgent.toLowerCase());
   return (
     <>
       <Hero />
