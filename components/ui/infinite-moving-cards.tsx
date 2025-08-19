@@ -2,20 +2,17 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import { Testimonial } from "@/components/sections/testimonials";
+import { Rating, RatingButton } from "@/components/ui/kibo-ui/rating";
 
 export const InfiniteMovingCards = ({
-  children,
+  items,
   direction = "left",
   speed = "fast",
   pauseOnHover = true,
   className,
 }: {
-  // items: {
-  //   quote: string;
-  //   name: string;
-  //   title: string;
-  // }[];
-  children: React.ReactNode;
+  items: Testimonial[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -86,33 +83,37 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
-        {/*{items.map((item, index) => (*/}
-        {/*  <li*/}
-        {/*    className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"*/}
-        {/*    key={index}*/}
-        {/*  >*/}
-        {/*    <blockquote>*/}
-        {/*      <div*/}
-        {/*        aria-hidden="true"*/}
-        {/*        className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"*/}
-        {/*      ></div>*/}
-        {/*      <span className="relative z-20 text-sm leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">*/}
-        {/*        {item.quote}*/}
-        {/*      </span>*/}
-        {/*      <div className="relative z-20 mt-6 flex flex-row items-center">*/}
-        {/*        <span className="flex flex-col gap-1">*/}
-        {/*          <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">*/}
-        {/*            {item.name}*/}
-        {/*          </span>*/}
-        {/*          <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">*/}
-        {/*            {item.title}*/}
-        {/*          </span>*/}
-        {/*        </span>*/}
-        {/*      </div>*/}
-        {/*    </blockquote>*/}
-        {/*  </li>*/}
-        {/*))}*/}
-        {children}
+        {items.map((item, index) => (
+          <li
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 px-8 py-6 md:w-[450px] border-zinc-700 bg-[linear-gradient(180deg,#27272a,#18181b)]"
+            key={index}
+          >
+            <blockquote>
+              <div
+                aria-hidden="true"
+                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+              ></div>
+              <Rating value={item.rating} readOnly className="mb-5">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <RatingButton className="text-yellow-500" key={index} />
+                ))}
+              </Rating>
+              <p className="relative z-20 text-sm leading-[1.6] font-normal text-gray-100">
+                {item.quote}
+              </p>
+              <div className="relative z-20 mt-6 flex flex-row items-center">
+                <span className="flex flex-col gap-1">
+                  <span className="text-sm leading-[1.6] font-normal text-gray-400">
+                    {item.name}
+                  </span>
+                  <span className="text-sm leading-[1.6] font-normal text-gray-400">
+                    {item.title}
+                  </span>
+                </span>
+              </div>
+            </blockquote>
+          </li>
+        ))}
       </ul>
     </div>
   );

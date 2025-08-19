@@ -33,7 +33,7 @@ const RevealText: React.FC<RevealTextProps> = ({
       initial={directionVariants[direction]}
       whileInView={triggerOnView ? { x: 0, y: 0, opacity: 1 } : undefined}
       transition={{ duration: 0.6, delay: delay / 1000 }}
-      style={{ display: "inline-block" }}
+      // style={{ display: "inline-block" }}
     >
       {children}
     </motion.div>

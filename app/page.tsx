@@ -3,9 +3,9 @@ import ServicesSection from "@/components/sections/services-section";
 import MyTeam from "@/components/sections/my-team";
 import Footer from "@/components/sections/footer";
 import Testimonials from "@/components/sections/testimonials";
+import React from "react";
 
 export default function Home() {
-  console.log(navigator.userAgent.toLowerCase());
   return (
     <>
       <Hero />
