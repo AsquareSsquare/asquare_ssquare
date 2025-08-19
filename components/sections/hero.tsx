@@ -37,7 +37,7 @@ function Hero() {
 
           <AnimateSlide delay={800}>
             <div className="space-x-10 mt-8">
-              <Button className="bg-blue-500 hover:bg-blue-500/90 text-white group">
+              <Button className="group">
                 Get free quote{" "}
                 <ArrowRight className="group-hover:translate-x-1 transition-transform duration-200" />
               </Button>
