@@ -18,7 +18,7 @@ export interface Feedback {
   quote: string;
 }
 
-function FeedbackForm() {
+function FeedbackForm({ setOpen }: { setOpen: (open: boolean) => void }) {
   const [loading, setLoading] = useState(false);
   const [rating, setRating] = useState(0);
 
@@ -40,6 +40,7 @@ function FeedbackForm() {
         toast.error(result.message);
         return;
       }
+      setLoading(false);
       toast.success(result.message);
     } catch (error) {
       console.error(error);

@@ -33,7 +33,7 @@ function Feedback() {
         setIsOpen={setOpenDrawer}
         header={<p>Share your feedback</p>}
       >
-        <FeedbackForm />
+        <FeedbackForm setOpen={setOpenDrawer} />
       </SmoothDrawer>
 
       <CustomModal
@@ -41,7 +41,7 @@ function Feedback() {
         setIsOpen={setOpenModal}
         header="Share your feedback"
       >
-        <FeedbackForm />
+        <FeedbackForm setOpen={setOpenModal} />
       </CustomModal>
     </>
   );
