@@ -40,7 +40,7 @@ function FeedbackForm({ setOpen }: { setOpen: (open: boolean) => void }) {
         toast.error(result.message);
         return;
       }
-      setLoading(false);
+      setOpen(false);
       toast.success(result.message);
     } catch (error) {
       console.error(error);
@@ -48,6 +48,10 @@ function FeedbackForm({ setOpen }: { setOpen: (open: boolean) => void }) {
       form.reset();
       setLoading(false);
     }
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
   return (
     <div>
@@ -74,7 +78,7 @@ function FeedbackForm({ setOpen }: { setOpen: (open: boolean) => void }) {
         </div>
 
         <div className="flex justify-end gap-4">
-          <Button type="submit">
+          <Button type="submit" disabled={loading}>
             {loading ? (
               <>
                 <Loader className="animate-spin" /> Submitting...
@@ -83,7 +87,14 @@ function FeedbackForm({ setOpen }: { setOpen: (open: boolean) => void }) {
               "Submit"
             )}
           </Button>
-          <Button variant="outline">Cancel</Button>
+          <Button
+            type="button"
+            variant="outline"
+            disabled={loading}
+            onClick={handleClose}
+          >
+            Cancel
+          </Button>
         </div>
       </form>
     </div>
