@@ -12,7 +12,7 @@ function ContactPage() {
           <div className="flex flex-col items-center">
             <AnimateSlide delay={300} className="max-w-xl">
               <h1 className="text-xl text-center lg:text-5xl font-bold text-neutral-900">
-                Let's Build Something Amazing Together
+                Let&apos;s Build Something Amazing Together
               </h1>
             </AnimateSlide>
             <AnimateSlide delay={600} className="max-w-xl mt-3">
