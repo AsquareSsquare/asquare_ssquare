@@ -15,9 +15,9 @@ interface Service {
 
 function ServiceCard({ service }: { service: Service }) {
   return (
-    <div className="bg-white shadow-md rounded-xl p-4 border hover:-translate-y-1 transition-transform duration-200">
+    <div className="bg-white shadow-md rounded-xl p-4 border hover:-translate-y-1 transition-transform duration-200 group/card">
       <div className="flex flex-col items-center space-y-3">
-        <div className="size-10 border rounded-md shadow-lg flex items-center justify-center">
+        <div className="size-10 border rounded-md shadow-lg flex items-center justify-center group-hover/card:scale-110 transition-transform duration-200">
           <service.icon size={18} className={service.iconColor} />
         </div>
         <h3 className="text-lg font-bold text-center">{service.title}</h3>
@@ -46,8 +46,9 @@ function ServiceCard({ service }: { service: Service }) {
           <span className="text-blue-500 ml-4">{service.timeline}</span>
         </p>
       </div>
-      <Button className="w-full mt-6">
-        Get free quote <ArrowRight />
+      <Button className="w-full mt-6 group/btn">
+        Get free quote{" "}
+        <ArrowRight className="group-hover/btn:translate-x-1 transition-transform duration-200" />
       </Button>
     </div>
   );

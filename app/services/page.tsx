@@ -17,33 +17,35 @@ function ServicesPage() {
     <>
       <section id="services-page">
         <HeroHighlight className="w-full">
-          <div className="mt-32 w-full flex flex-col items-center justify-center px-4">
-            <AnimateSlide delay={300}>
-              <h1 className="text-xl text-center lg:text-5xl font-bold text-neutral-900">
-                Professional
-              </h1>
-            </AnimateSlide>
-            <AnimateSlide delay={600}>
-              <h1 className="text-xl text-center lg:text-5xl font-bold text-neutral-900">
-                Development Services
-              </h1>
-            </AnimateSlide>
-            <AnimateSlide delay={900} className="max-w-xl mt-3">
-              <p className="font-normal text-center text-base text-neutral-800 mx-auto">
-                From concept to deployment, we provide end-to-end development
-                services tailored for startups and growing businesses.
-              </p>
-            </AnimateSlide>
+          <div className="min-h-screen w-full flex flex-col items-center justify-center px-4">
+            <div className="flex flex-col items-center">
+              <AnimateSlide delay={300}>
+                <h1 className="text-xl text-center lg:text-5xl font-bold text-neutral-900">
+                  Professional
+                </h1>
+              </AnimateSlide>
+              <AnimateSlide delay={600}>
+                <h1 className="text-xl text-center lg:text-5xl font-bold text-neutral-900">
+                  Development Services
+                </h1>
+              </AnimateSlide>
+              <AnimateSlide delay={900} className="max-w-xl mt-3">
+                <p className="font-normal text-center text-base text-neutral-800 mx-auto">
+                  From concept to deployment, we provide end-to-end development
+                  services tailored for startups and growing businesses.
+                </p>
+              </AnimateSlide>
 
-            <div className="flex items-center justify-center flex-wrap gap-6 mt-10">
-              {sectionBadge.map((item, index) => (
-                <AnimateSlide key={index} delay={900 + 300 * (index + 1)}>
-                  <Badge className="bg-accent text-slate-800 shadow-md border text-base [&>svg]:size-4 rounded-full">
-                    <item.icon size={20} className={item.iconColor} />{" "}
-                    {item.text}
-                  </Badge>
-                </AnimateSlide>
-              ))}
+              <div className="flex items-center justify-center flex-wrap gap-6 mt-10">
+                {sectionBadge.map((item, index) => (
+                  <AnimateSlide key={index} delay={900 + 300 * (index + 1)}>
+                    <Badge className="bg-accent text-slate-800 shadow-md border text-base [&>svg]:size-4 rounded-full">
+                      <item.icon size={20} className={item.iconColor} />{" "}
+                      {item.text}
+                    </Badge>
+                  </AnimateSlide>
+                ))}
+              </div>
             </div>
           </div>
 
